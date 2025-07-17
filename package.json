@@ -1,0 +1,16 @@
+{
+  "name": "cryptotokenmanagerbyindramanimishra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon src / index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "expresss": "^0.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
