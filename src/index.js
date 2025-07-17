@@ -3,9 +3,12 @@ const express = require('express');
 const { PORT } = require('./config/serverconfig');
 const connectDv = require('./config/dataBaseconfig');
 const startConsole = require('./console/tokenconsole');
+const apiRouter = require('./routes/apiroute');
 
 const app = express();
-
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use('/api',apiRouter);
 app.get("/", (req, res) => {
   res.send('<h1>Server is running</h1>');
 });

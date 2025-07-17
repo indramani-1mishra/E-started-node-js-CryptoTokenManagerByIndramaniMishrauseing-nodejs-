@@ -1,5 +1,5 @@
 const { findById } = require("../models/tokenSchema");
-const { findTokenBySymbol, createToken, findAllToken, updateTokenById, deleteToken } = require("../repository/tokenrepo");
+const { findTokenBySymbol, createToken, findAllToken, updateTokenById, deleteToken, findTokenById } = require("../repository/tokenrepo");
 
 
 const createTokenfromservice= async(tokendetails)=>{
@@ -30,7 +30,7 @@ const getAllToken = async()=>{
 
 const getTokenById = async(id)=>{
     try{
-     const getTokenByIdResponse = await findById(id);
+     const getTokenByIdResponse = await findTokenById(id);
      return getTokenByIdResponse;
     }
     catch(error){
